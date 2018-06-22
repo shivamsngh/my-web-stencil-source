@@ -1,15 +1,26 @@
-header {
+/* header {
   background: #5851ff;
   color: white;
   height: 56px;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-}
+} */
 
-h1 {
+/* h1 {
   font-size: 1.4rem;
   font-weight: 500;
   color: #fff;
   padding: 0 12px;
-}
+} */
+
+/* START */
+/*!
+ * Start Bootstrap - My Web v1.0.0 (http://shivamsngh.github.io)
+ * Copyright 2013-2018 Shivam Singh
+ * Licensed under  ()
+ */
+ .stencil-root-container{
+   width:100%;
+   height: 100%;
+ }

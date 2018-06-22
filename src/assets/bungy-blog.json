@@ -1,0 +1,326 @@
+{
+    "events": [
+        {
+            "eventName": "Published Independent Component Communication @Medium",
+            "details": "I just published a small technical blog post on Independent Component Communication in Angular.",
+            "link": "https://medium.com/@shivam.soham666/independent-component-communication-in-angular-2914ec554a35",
+            "startDate": "17 June 2018",
+            "endDare": "17 June 2018",
+            "capacity": "Blogger"
+        },
+        {
+            "eventName": "Web4All Conference Lyon, France",
+            "details": "Will be presenting a research on Assistive Technology in Lyon, France at the reputed Web4All conference on 24th of April. The paper is titled \"Accessify: An ML Powered Application to Automatically Provide Image Descriptions on Website\" co authored with Nishith and Anurag",
+            "link": "https://www.w4a.info/2018/conference-program/",
+            "startDate": "23 April 2018",
+            "endDare": "25 April 2018",
+            "capacity": "Speaker"
+        },
+        {
+            "eventName": "A Unique Research based Hackathon",
+            "details": "Recently participated in a unique research based hackathon, HACKEAM18, organised by NSIT, New Delhi. Healthcare treks and 24 hrs of non-stop coding. All experiences well documenetd by Anurag in the details.",
+            "link": "http://www.anuragbhandari.com/blog/2018/02/hackeam-18-a-hackathon-that-left-a-lot-to-be-desired/",
+            "startDate": "10 Feb 2018",
+            "endDare": "11 Feb 2018",
+            "capacity": "Participant"
+        },
+        {
+            "eventName": "My First IEEE Publication",
+            "details": "A published research paper presented in IEEE SSCI 2017, Honolulu, Hawaii, USA",
+            "link": "http://ieeexplore.ieee.org/document/8280828/",
+            "startDate": "5 Feb 2018",
+            "endDare": "5 Feb 2108",
+            "capacity": "Publication"
+        },
+        {
+            "eventName": "Speaking Session on Augmented Reality",
+            "details": "Will be speaking on the WebApps and AR at JSLovers event.",
+            "link": "https://www.meetup.com/jslovers/events/245983847",
+            "startDate": "7 Jan 2017",
+            "endDare": "7 Jan 2107",
+            "capacity": "Speaker"
+        },
+        {
+            "eventName": "BUCKETLIST-JUMP",
+            "details": "Will be attempting my second jump at a height of 160 mts in Nepal near China border.",
+            "link": "https://www.google.co.in/maps/place/Bhotekosi+Bungee+Jump/@27.8480006,85.7331756,47999m/data=!3m1!1e3!4m8!1m2!2m1!1sbungy+nepali!3m4!1s0x0:0xae9a9e05f6d29e6d!8m2!3d27.8759936!4d85.8923149",
+            "startDate": "2 Dec 2017",
+            "endDare": "3 Dec 2107",
+            "capacity": "Jump"
+        },
+        {
+            "eventName": "GHCI 2017",
+            "details": "Presented a paper as speaker at Grace Hopper Celebration India 2017, Bangalore on 16th November 2017",
+            "link": "https://ghcischedule.anitab.org/blog/speaker/shivam-singh/",
+            "startDate": "16 Nov 2017",
+            "endDare": "17 Nov 2017",
+            "capacity": "Speaker"
+        },
+        {
+            "eventName": "GAIB 2017",
+            "details": "Attended Artificial Intelligence Bootcamp India 2017, Microsoft, Gurgaon on 23rd September 2017",
+            "link": "https://allevents.in/events/ai-bootcamp-2017-gurgaon/1404087219704510",
+            "startDate": "23 Sep 2017",
+            "endDare": "23 Sep 2017",
+            "capacity": "Attendee"
+        }
+    ],
+    "books": [
+        {
+            "title": "One night at call center",
+            "myrating": 6,
+            "author": "Chetan Bhagat",
+            "read": true
+        },
+        {
+            "title": "3 Mistakes of my life",
+            "myrating": 8,
+            "author": "Chetan Bhagat",
+            "read": true
+        },
+        {
+            "title": "A roller coaster Ride",
+            "myrating": 7,
+            "author": "Saumil Srivastav",
+            "read": true
+        },
+        {
+            "title": "Nothing For You My Dear Still I Love You",
+            "myrating": 6,
+            "author": "Arpit Dugar",
+            "read": true
+        },
+        {
+            "title": "Harry Potter and The order of Phoenix",
+            "myrating": 9,
+            "author": "J.K Rowling",
+            "read": true
+        },
+        {
+            "title": "Chanakya's Chant",
+            "myrating": 8,
+            "author": "Ashwin Sanghi",
+            "read": true
+        },
+        {
+            "title": "Wings of Fire",
+            "myrating": 9,
+            "author": "Dr. APJ Abdul Kalam and Arun Tiwari",
+            "read": true
+        },
+        {
+            "title": "Turning Points: A journey through challenges",
+            "myrating": 8,
+            "author": "Dr. APJ Abdul Kalam and Arun Tiwari",
+            "read": true
+        },
+        {
+            "title": "Immortals of Meluha",
+            "myrating": 9,
+            "author": "Amish Tripathi",
+            "read": true
+        },
+        {
+            "title": "The secret of Nagas",
+            "myrating": 8.5,
+            "author": "Amish Tripathi",
+            "read": true
+        },
+        {
+            "title": "The Oath of Vayuputras",
+            "myrating": 8,
+            "author": "Amish Tripathi",
+            "read": true
+        },
+        {
+            "title": "And then there were None",
+            "myrating": 9,
+            "author": "Agatha Christie",
+            "read": true
+        },
+        {
+            "title": "The Italian's Inexperienced Mistress",
+            "myrating": 7.5,
+            "author": "Lynne Graham",
+            "read": true
+        },
+        {
+            "title": "A Passage to India",
+            "myrating": 9,
+            "author": "E.M Forster",
+            "read": true
+        },
+        {
+            "title": "Alexander's Secret",
+            "myrating": 9,
+            "author": "Chrishtopher C. Doyle",
+            "read": true
+        },
+        {
+            "title": "The Secret of Druids",
+            "myrating": 9,
+            "author": "Chrishtopher C. Doyle",
+            "read": true
+        },
+        {
+            "title": "Pakistan Before and After Osama",
+            "myrating": 8.5,
+            "author": "Imtiaz Gul",
+            "read": true
+        },
+        {
+            "title": "Afghanistan-The Bear Trap",
+            "myrating": 8.5,
+            "author": "Brigadier Mohd Yusuf & Mark Adkin",
+            "read": true
+        },
+        {
+            "title": "And the Mountains Echoed",
+            "myrating": 10,
+            "author": "Khaled Hosseini",
+            "read": true
+        },
+        {
+            "title": "I too had a love story",
+            "myrating": 8.5,
+            "author": "Ravinder Singh",
+            "read": true
+        },
+        {
+            "title": "The Murder of Roger Ackroyd",
+            "myrating": 0.0,
+            "author": "Agatha Christie",
+            "read": null
+        },
+        {
+            "title": "Breaking India: Western Interventions in Dravidian and Dalit Faultlines",
+            "myrating": 0.0,
+            "author": "Rajiv Malhotra",
+            "read": null
+        },
+        {
+            "title": "Scion of Ikshavaku",
+            "myrating": 9,
+            "author": "Amish Tripathi",
+            "read": true
+        },
+        {
+            "title": "Sita - Warrior of Mithila",
+            "myrating": 9,
+            "author": "Amish Tripathi",
+            "read": true
+        },
+        {
+            "title": "The Subtle Art of Not Giving a F*ck",
+            "myrating": 9.5,
+            "author": "Mark Manson",
+            "read": false
+        }
+    ],
+    "listItems": [
+        {
+            "name": "Bungee Jump",
+            "location": "Rishikesh, India",
+            "link": "https://shivamsngh.github.io/pages/blog.html",
+            "jumpsStats": [
+                {
+                    "height": "83 meters",
+                    "allPhotoBlogData": [
+                        {
+                            "caption": "Big Black Coffee & Blog",
+                            "quote": "Dreams and Nightmares are the same, its just a matter of attachment with our memories.",
+                            "photoName": "coffee-cup",
+                            "photoId": "coffee-cup.jpg",
+                            "detail": "I have been an admirer of great delicacies for long now. Well, Black Coffee? I guess a new acquired taste. Shuns your mind for a while, leaves you in a blank state for a moment and when you regain yourself, you are new, atleast for a moment.<br/>Sitting somewhere surrounded by lush green mountains, calm and quiet.",
+                            "timeStamp": "30th Sept, 2017",
+                            "videoUrl": "none"
+                        },
+                        {
+                            "caption": "So much for faith, atleast they have it.",
+                            "quote": "Innocence is like a dumb leper who has lost his bell, wandering the world, meaning no harm. -by Graham Greene",
+                            "photoName": "ghats",
+                            "photoId": "ghats.jpg",
+                            "detail": "This quote by Mr.Greene is what describes these poeple of failth, the best. Looking to an almighty who might, or might not, listen to their problems and show a solution. A small town surrounded by mountains in lap of the Holy Ganga(it's not called Ganges as it is best known outside my country).",
+                            "timeStamp": "1st October, 2017"
+                        },
+                        {
+                            "caption": "An engineering marvel",
+                            "quote": "The lights, the people, the birdge, their faith and their emotions. All at one place.",
+                            "photoName": "laxmanjhoola1",
+                            "photoId": "laxmanjhoola1.jpg",
+                            "detail": "A hanging bridge, thus a Jhoola. Thousands of people cross by everyday, some for the sake of worship, others for fun. The famous German bakery is on the city side at start of the bridge. If not talking to a just met Israeli friend, you can enjoy the view from the brdige. Yes, many foreigners visit Rishiskesh, especially from Israel.",
+                            "timeStamp": "1st October, 2017",
+                            "videoUrl": "none"
+                        },
+                        {
+                            "caption": "Evil at the hand of justice",
+                            "quote": "धारणाद्धर्ममित्याहुः धर्मेण विधृताः प्रजाः",
+                            "photoName": "ravan-dahan",
+                            "photoId": "ravan-dahan.jpg",
+                            "detail": "The sholka means 'Dharma is so called because it sustains or supports society'.<br>Unintetionally witnessed this Ravana-Dahan scene at Ghats acompained by a lot of fire crackers.",
+                            "timeStamp": "1st October, 2017",
+                            "videoUrl": "none"
+                        },
+                        {
+                            "caption": "The Jump",
+                            "quote": "Someday among these birds, you will find yourself flying",
+                            "photoName": "jump",
+                            "photoId": "jump.jpg",
+                            "detail": "The highest jump site in India, 83 meters. A breath-taking view, nature at it's best and a perfect place to start the bucketlist. The leap of a plutonian as I would call it.",
+                            "timeStamp": "1st October, 2017",
+                            "videoUrl": "none"
+                        },
+                        {
+                            "caption": "Unending Roads",
+                            "quote": "Woods are lovely dark and deep, but I have promises to keep.",
+                            "photoName": "bike-shivpuri",
+                            "photoId": "bike-shivpuri.jpg",
+                            "detail": "Roads. Miles traveled. Miles remaining. It's not the same and it won't be but still it's the road. :)",
+                            "timeStamp": "1st October, 2017",
+                            "videoUrl": "none"
+                        },
+                        {
+                            "caption": "A walk on waters",
+                            "quote": "The most toughest terrains are crosssed by will.",
+                            "photoName": "waterbed",
+                            "photoId": "waterbed.jpg",
+                            "detail": "Somewhere deep in terrains of Shivpuri, Rishikesh. Surrounded by lush green mountains. Perfect place to write, think and relax.",
+                            "timeStamp": "1st October, 2017",
+                            "videoUrl": "none"
+                        },
+                        {
+                            "caption": "A solo traveller",
+                            "quote": "Silence has it's own music, cozy to the ears.",
+                            "photoName": "deep-shivpuri-bike",
+                            "photoId": "deep-shivpuri-bike.jpg",
+                            "detail": "Imagine Dragons combined with this serene beauty in solitary. Thoughts, diary, bucketlists and countless memories",
+                            "timeStamp": "1st October, 2017",
+                            "videoUrl": "none"
+                        },
+                        {
+                            "caption": "A beach, The river.",
+                            "quote": "Nature is the most ruthless teacher.",
+                            "photoName": "vasishtha-cave",
+                            "photoId": "vasishtha-cave.jpg",
+                            "detail": "Found this almost-deserted river beach far from Rishikesh. Mostly untouched by human-hands and a marvel of nature.",
+                            "timeStamp": "1st October, 2017",
+                            "videoUrl": "none"
+                        }
+                    ],
+                    "mapLocation": "https://www.google.co.in/maps/place/Jumpin+Heights+Bungee+Bridge/@30.0631978,78.3983181,491m/data=!3m1!1e3!4m8!1m2!2m1!1sbungee+jump+rishikesh!3m4!1s0x0:0xe54fb3f1ebbb275a!8m2!3d30.0631978!4d78.3983181",
+                    "place": "Rishikesh, Uttarakhand, India",
+                    "jumpDate": "Sep 30, 2017",
+                    "blogFile": null
+                }
+            ],
+            "completed": true
+        },
+        {
+            "name": "Bungee Jump",
+            "location": "Bhotekoshi, Nepal",
+            "link": "https://www.google.co.in/maps/place/Bhotekosi+Bungee+Jump/@27.8480006,85.7331756,47999m/data=!3m1!1e3!4m8!1m2!2m1!1sbungy+nepali!3m4!1s0x0:0xae9a9e05f6d29e6d!8m2!3d27.8759936!4d85.8923149",
+            "jumpsStats": [],
+            "completed": true
+        }
+    ]
+}

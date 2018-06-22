@@ -1,5 +1,5 @@
 {
-  "name": "@stencil/starter",
+  "name": "my-web-stencil",
   "private": true,
   "version": "0.0.1",
   "description": "Stencil App Starter",
@@ -15,8 +15,9 @@
     "test.watch": "jest --watch"
   },
   "dependencies": {
-    "@stencil/core": "^0.9.7",
-    "@stencil/router": "latest"
+    "@stencil/core": "0.9.10",
+    "@stencil/router": "latest",
+    "firebase": "^5.1.0"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
@@ -46,5 +47,14 @@
       "json",
       "jsx"
     ]
-  }
+  },
+  "main": "stencil.config.js",
+  "keywords": [
+    "my-web",
+    "shivam",
+    "singh",
+    "shivam",
+    "singh",
+    "research"
+  ]
 }
