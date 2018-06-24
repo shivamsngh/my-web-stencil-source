@@ -14,25 +14,28 @@ export class RecentEventCard {
     }
     render() {
         const eventBubbleInlineStyle = {
-            float: 'right'
+            float: ''
         }
         return (
+            <div class="min-margin">
+                <div class="message is-dark">
+                    <div class="message-header" >
+                        <p>{this.cardEvent.eventName}</p>
+                        <a href="#" class="icon">
+                            <span class="" style={eventBubbleInlineStyle}></span>
+                        </a>
+                    </div >
+                    <div class="message-body">
+                        {this.cardEvent.details}
+                        <hr/>
+                       <span><date class="is-pulled-left"> {this.cardEvent.startDate}</date></span> 
+                        <a href={this.cardEvent.link} class="is-pulled-right" target="_blank" rel="noopener">Details</a>
+                        <hr class="is-invisible"/>
+                    </div>
 
-            <div class="event-bubble  bg-primary left-top">
-                <div class="eventtext" >
-                    <a href="#">
-                        <span class="glyphicon glyphicon-bookmark" style={eventBubbleInlineStyle}></span>
-                    </a>
-                    <div class="eventtext-header">
-                        <h4 class="recent-card-header">{this.cardEvent.eventName}</h4>
-                    </div>
-                    <p class="recent-card-body">{this.cardEvent.details}</p>
-                    <div class="recent-card-footer">
-                        <span> {this.cardEvent.startDate}</span>
-                        <a href='{{event.link}}' class='btn btn-xs' target="_blank" rel="noopener">Details</a>
-                    </div>
                 </div >
-            </div >
+            </div>
+
         );
     }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@stencil/core';
+import { Component, Prop, Element } from '@stencil/core';
 
 
 @Component({
@@ -7,59 +7,81 @@ import { Component } from '@stencil/core';
 })
 export class MyWebNav {
 
+    @Prop() backgroundColor: string;
+    @Prop() textColor: string;
+    @Element() elem: HTMLElement;
+
+    componentDidLoad() {
+        const $navBurger = this.elem.querySelector('.navbar-burger');
+        console.log("burger is", $navBurger);
+        $navBurger.addEventListener('click', () => {
+            const target = $navBurger.attributes.getNamedItem('data-target').value;
+            console.log("target is", target);
+            const $target = this.elem.querySelector(`${target}`);
+            $navBurger.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+        })
+
+    }
 
     render() {
         const orcid = {
             anchor: { 'vertical-align': 'top' },
             img: {
-                'width:1em;margin-right': '.5em'
+                'width': '1em',
+                'margin-right': '.5em'
             }
         };
+        const theme = {
+            'color': this.textColor,
+            'background-color': this.backgroundColor
+        }
         return (
-            <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" >
-                <div class="container-fluid">
+            <nav id="mainNav" class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation" style={theme}>
 
-                    {/* <!-- Brand and toggle get grouped for better mobile display --> */}
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span> Menu
-          <i class="fa fa-bars"></i>
-                        </button>
-                        <a class="navbar-brand page-scroll" >Home</a>
-                    </div>
+                {/* <!-- Brand and toggle get grouped for better mobile display --> */}
+                <div class="navbar-brand">
+                    <stencil-route-link url='/'>
+                        <a class="navbar-item has-text-light"><i class="fas fa-2x fa-home"></i> </a>
+                    </stencil-route-link>
 
-                    {/* <!-- Collect the nav links, forms, and other content for toggling --> */}
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a class="page-scroll" href="#about" >About</a>
-                            </li>
-                            <li>
-                                <a class="page-scroll" href="#services">Social</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a id="bucketDrop" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Bucketlist</a>
-                                <ul class="dropdown-menu" aria-labelledby="bucketDrop">
-                                    <li><a href="#" class="active" >Rishikesh, India</a></li>
-                                    <li><a href="#">Bhotekosi, Nepal</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="page-scroll" href="#portfolio">Portfolio</a>
-                            </li>
-                            <li>
-                                <a class="page-scroll" href="#contact">Contact</a>
-                            </li>
-                            <li>
-                                <a class="page-scroll" href="assets/shivamsingh.pdf" target="_blank" rel="noopener">CV</a>
-                            </li>
-                            <li>
-                                <a href="https://orcid.org/0000-0003-2918-7975" target="orcid.widget" rel="noopener noreferrer" style={orcid.anchor}><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style={orcid.img} alt="ORCID iD icon" />orcid.org/0000-0003-2918-7975</a>
-                            </li>
-                        </ul>
-                    </div>
-                    {/* <!-- /.navbar-collapse --> */}
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-toggle="collapse" data-target="#navMenu">
+                        {/* <i class="fa fa-bars"></i> */}
+                        <span aria-hidden="true" class="has-background-white"></span>
+                        <span aria-hidden="true" class="has-background-white"></span>
+                        <span aria-hidden="true" class="has-background-white"></span>
+                    </a>
+
                 </div>
+
+                {/* <!-- Collect the nav links, forms, and other content for toggling --> */}
+                <div class="navbar-menu" id="navMenu">
+                    <div class="navbar-end">
+                        <a class="navbar-item" href="/#about" >About</a>
+                        <a class="navbar-item" href="/#social">Social</a>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">Bucketlist</a>
+                            <div class="navbar-dropdown">
+                                <stencil-route-link url='/bucketlist' class="navbar-item">
+                                     Rishikesh, India
+                                    
+                                </stencil-route-link>
+                                <hr class="navbar-divider" />
+                                <a href="#" class="navbar-item">Bhotekosi, Nepal</a>
+                            </div>
+                        </div>
+                        <stencil-route-link url='/event' class="navbar-item only-on-mobile">
+                        Events
+                        </stencil-route-link>
+
+                        <a class="navbar-item" href="/#portfolio">Portfolio</a>
+                        <a class="navbar-item" href="/#contact">Contact</a>
+                        <a class="navbar-item" href="assets/shivamsingh.pdf" target="_blank" rel="noopener">CV</a>
+                        <a class="navbar-item" href="https://orcid.org/0000-0003-2918-7975" target="orcid.widget" rel="noopener noreferrer" style={orcid.anchor}><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style={orcid.img} alt="ORCID iD icon" />orcid.org/0000-0003-2918-7975</a>
+                    </div>
+
+                </div>
+                {/* <!-- /.navbar-collapse --> */}
                 {/* <!-- /.container-fluid --> */}
             </nav>
         );

@@ -1,0 +1,4 @@
+div.twitter-box{
+    overflow:scroll;
+    max-height: 330px;
+}

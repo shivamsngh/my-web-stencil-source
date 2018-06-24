@@ -1,0 +1,4 @@
+.notification{
+    max-height: 110px;
+    overflow: scroll;
+}

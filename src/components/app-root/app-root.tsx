@@ -8,6 +8,8 @@ import { firebaseConfig } from '../../global/helper';
 })
 export class AppRoot {
 
+
+
   componentWillLoad() {
     this.configureFirebase();
   }
@@ -20,24 +22,16 @@ export class AppRoot {
   render() {
     return (
       <div class="stencil-root-container">
-        {/* <header>
-          <h1>Stencil App Starter</h1>
-        </header> */}
         <my-web-nav></my-web-nav>
-        <my-web-header></my-web-header>
         <main>
-          {/* <stencil-router>
-            <stencil-route url='/' component='app-home' exact={true}>
+          <stencil-router>
+            <stencil-route url='/' component='my-web-home' exact={true}>
             </stencil-route>
-
-            <stencil-route url='/profile/:name' component='app-profile'>
+            <stencil-route url='/bucketlist' component='my-web-bucketlist'>
             </stencil-route>
-          </stencil-router> */}
-          <my-web-about></my-web-about>
-          <my-web-social></my-web-social>
-          <my-web-portfolio></my-web-portfolio>
-          <my-web-more></my-web-more>
-          <my-web-contact></my-web-contact>
+            <stencil-route url='/event' component='my-web-event'>
+            </stencil-route>
+          </stencil-router>
         </main>
       </div>
     );

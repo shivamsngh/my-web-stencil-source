@@ -1,4 +1,5 @@
-import { Component } from '@stencil/core';
+import { Component, Prop } from '@stencil/core';
+import { ContactDetails } from '../../global/ContactDetails';
 
 
 @Component({
@@ -7,27 +8,34 @@ import { Component } from '@stencil/core';
 })
 export class MyWebContact {
 
+    @Prop() contact: ContactDetails;
     render() {
         return (
-            <section id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2 text-center">
-                            <h2 class="section-heading">contact.heading </h2>
-                            <hr class="primary" />
-                            <p>contact.text</p>
+            <section id="contact" class="hero is-dark is-bold">
+                <div class="hero-body">
+                    <div class="has-text-centered">
+                        <h2 class="title">{this.contact.heading} </h2>
+                        <hr class="primary" />
+                        <h3 class="subtitle" >{this.contact.text}</h3>
+                        <span></span>
+                    </div>
+                    <div class="columns">
+                        <div class="column has-text-centered">
+                        <div class="content">
+                        <i class="fa fa-phone fa-3x sr-contact"></i>
+                            <p > {this.contact.phone} </p>
                         </div>
-                        <div class="col-lg-4 col-lg-offset-2 text-center">
-                            <i class="fa fa-phone fa-3x sr-contact"></i>
-                            <p> contact.phone </p>
+                            
                         </div>
-                        <div class="col-lg-4 text-center">
-                            <i class="fa fa-envelope-o fa-3x sr-contact" ></i>
+                        <div class="column has-text-centered">
+                            <i class="fa fa-envelope fa-3x" ></i>
                             <p>
-                                <a href="mailto:{{contact.email}}"> contact.email</a>
+                                <a href="mailto:{{contact.email}}"> {this.contact.email}</a>
                             </p>
+                           
                         </div>
                     </div>
+
                 </div>
             </section>
         );

@@ -1,4 +1,5 @@
-import { Component } from '@stencil/core';
+import { Component, Prop } from '@stencil/core';
+import { About } from '../../global/About';
 
 
 @Component({
@@ -7,20 +8,19 @@ import { Component } from '@stencil/core';
 })
 export class MyWebAbout {
 
+    @Prop() aboutYou: About;
     render() {
         return (
-            <section class="bg-primary" id="about" >
-                <div class="container" >
-                    <div class="row" >
-                        <div class="col-lg-8 col-lg-offset-2 text-center" >
-                            <h2 class="section-heading" > about.heading
-                                </h2>
+            <section class="section" id="about" >
+                <div class="container has-text-centered content" >
+                        <div class="column text-center" >
+                            <h2 class="title" > {this.aboutYou.heading}
+                            </h2>
                             <hr class="light" />
-                            <p class="text-faded" > about.introText </p>
-                            <p class="text-faded" > about.abtPassionText </p>
+                            <p class="text-faded" > {this.aboutYou.introText} </p>
+                            <p class="text-faded" > {this.aboutYou.abtPassionText} </p>
                             <a href="#services" class="page-scroll btn btn-default btn-xl sr-button" > Know More! </a>
                         </div>
-                    </div>
                 </div>
             </section>
         );

@@ -1,19 +1,19 @@
 import { TestWindow } from '@stencil/core/testing';
-import { AppProfile } from './app-profile';
+import { MyWebBucketList } from './app-bucketlist.component';
 
 describe('app-profile', () => {
   it('should build', () => {
-    expect(new AppProfile()).toBeTruthy();
+    expect(new MyWebBucketList()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element: HTMLAppProfileElement;
+    let element: HTMLMyWebBucketlistElement;
     let testWindow: TestWindow;
     beforeEach(async () => {
       testWindow = new TestWindow();
       element = await testWindow.load({
-        components: [AppProfile],
-        html: '<app-profile></app-profile>'
+        components: [MyWebBucketList],
+        html: '<my-web-bucketlist></my-web-bucketlist>'
       });
     });
 

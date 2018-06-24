@@ -1,31 +1,41 @@
-import { Component } from '@stencil/core';
+import { Component, Prop } from '@stencil/core';
+import { Portfolio } from '../../global/Portfolio';
 
 @Component({
     tag: 'my-web-portfolio',
     styleUrl: 'app-portfolio.component.css'
 })
 export class MyWebPortfolio {
+    @Prop() portfolio: Portfolio[] = [];
+
+
     render() {
         return (
-            <section class="no-padding" id="portfolio">
-                <div class="container-fluid">
-                    <div class="row no-gutter">
-                        <div class="col-lg-4 col-sm-6">
-                            <a href="#" class="portfolio-box">
-                                <img src="assets/img/portfolio/thumbnails/{{item.thumbnail}}" class="img-responsive" alt="portfolio" />
-                                <div class="portfolio-box-caption">
-                                    <div class="portfolio-box-caption-content">
-                                        <div class="project-category text-faded">
-                                            item.title
-							</div>
-                                        <div class="project-name">
-                                            detail
-							</div>
-                                    </div>
+            <section class="section" id="portfolio">
+                <div class="container has-text-centered">
+                    <h2 class="title">Portfolio</h2>
+                    <hr class="light" />
+                </div>
+                <div class="columns">
+                    {this.portfolio.map((item: Portfolio) =>
+                        <div class="column">
+                            <article class="message is-dark">
+                                <div class="message-header">
+                                    <p>{item.title}</p>
+                                    {/* <button class="delete" aria-label="delete"></button> */}
                                 </div>
-                            </a>
+                                <div class="message-body">
+                                    <a href="#">
+                                        {item.details.map((detail: String) =>
+                                            <div class="project-name">
+                                                {detail}
+                                            </div>
+                                        )}
+                                    </a>
+                                </div>
+                            </article>
                         </div>
-                    </div>
+                    )}
                 </div>
             </section>
         );

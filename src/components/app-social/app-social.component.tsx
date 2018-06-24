@@ -1,4 +1,4 @@
-import { Component } from "@stencil/core";
+import { Component, Prop } from "@stencil/core";
 import { Books } from "../../global/Books";
 import firebase from 'firebase/app';
 
@@ -11,9 +11,13 @@ export class MyWebSocial {
     private db = firebase.database();
     books: Books[] = [];
     currentBook: Books;
+    @Prop({ context: 'isServer' }) private isServer: boolean;
 
     componentWillLoad() {
-        return this.getBooksLibrary();
+        if (this.isServer === false) {
+            return this.getBooksLibrary();
+        }
+
     }
 
     public getBooksLibrary() {
@@ -30,42 +34,34 @@ export class MyWebSocial {
     }
 
     render() {
+        const blogData = {
+            url: `https://www.googleapis.com/blogger/v3/blogs/4562383522539686383/posts`,
+            key: `AIzaSyBgiSne19z3sYYRp-KC7HZajqT4SSR9iDM`
+        };
         return (
-            <section id="services">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <h2 class="section-heading">Social</h2>
-                            <hr class="primary" />
-                        </div>
-                    </div>
+            <section id="social" class="section">
+                <div class="container has-text-centered">
+                    <h2 class="title">Social</h2>
+                    <hr class="light" />
                 </div>
-                <div class="container">
-                    <div class="row">
-                        {/* <!-- Blog --> */}
-                        <div class="col-lg-4 col-md-8 text-center">
-                            <div class="service-box">
-                                <app-blog></app-blog>
-                            </div>
-                        </div>
-                        {/* // <!-- /Blog --> */}
-
-                        {/* // <!-- Twitter --> */}
-                        <div class="col-lg-4 col-md-8 text-center">
-                            <div class="service-box">
-                                <app-twitter></app-twitter>
-                            </div>
-                        </div>
-                        {/* <!-- /Twitter --> */}
-
-                        {/* <!-- Books --> */}
-                        <div class="col-lg-4 col-md-8 text-center">
-                            <div class="service-box">
-                                <my-web-book-library books={this.books} currentBook={this.currentBook}></my-web-book-library>
-                            </div>
-                        </div>
-                        {/* <!-- /Books --> */}
+                <div class="columns">
+                    {/* <!-- Blog --> */}
+                    <div class="column">
+                        <my-web-blog blogUrl={blogData.url} blogApiKey={blogData.key}></my-web-blog>
                     </div>
+                    {/* // <!-- /Blog --> */}
+
+                    {/* // <!-- Twitter --> */}
+                    <div class="column">
+                        <my-web-twitter></my-web-twitter>
+                    </div>
+                    {/* <!-- /Twitter --> */}
+
+                    {/* <!-- Books --> */}
+                    <div class="column">
+                        <my-web-book-library books={this.books} currentBook={this.currentBook}></my-web-book-library>
+                    </div>
+                    {/* <!-- /Books --> */}
                 </div>
             </section>
         );

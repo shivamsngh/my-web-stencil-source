@@ -1,0 +1,6 @@
+div ul li.rss-item{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height:100px
+}
+

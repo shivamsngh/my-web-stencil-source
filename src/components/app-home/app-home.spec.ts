@@ -1,18 +1,18 @@
 import { TestWindow } from '@stencil/core/testing';
-import { AppHome } from './app-home';
+import { MyWebHome } from './app-home';
 
 describe('app', () => {
   it('should build', () => {
-    expect(new AppHome()).toBeTruthy();
+    expect(new MyWebHome()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element: HTMLAppHomeElement;
+    let element: HTMLMyWebHomeElement;
     let testWindow: TestWindow;
     beforeEach(async () => {
       testWindow = new TestWindow();
       element = await testWindow.load({
-        components: [AppHome],
+        components: [MyWebHome],
         html: '<app-home></app-home>'
       });
     });

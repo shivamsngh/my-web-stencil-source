@@ -29,11 +29,23 @@ import '@stencil/router';
 import '@stencil/state-tunnel';
 
 import {
+  About,
+} from './global/About';
+import {
   MatchResults,
 } from '@stencil/router';
 import {
+  ContactDetails,
+} from './global/ContactDetails';
+import {
+  Portfolio,
+} from './global/Portfolio';
+import {
   Books,
 } from './global/Books';
+import {
+  Photo,
+} from './global/BucketList';
 import {
   CardEvent,
 } from './global/CardEvent';
@@ -42,7 +54,7 @@ declare global {
 
   namespace StencilComponents {
     interface MyWebAbout {
-
+      'aboutYou': About;
     }
   }
 
@@ -65,7 +77,40 @@ declare global {
   }
   namespace JSXElements {
     export interface MyWebAboutAttributes extends HTMLAttributes {
+      'aboutYou'?: About;
+    }
+  }
+}
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface MyWebBucketlist {
+      'match': MatchResults;
+    }
+  }
+
+  interface HTMLMyWebBucketlistElement extends StencilComponents.MyWebBucketlist, HTMLStencilElement {}
+
+  var HTMLMyWebBucketlistElement: {
+    prototype: HTMLMyWebBucketlistElement;
+    new (): HTMLMyWebBucketlistElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-web-bucketlist': HTMLMyWebBucketlistElement;
+  }
+  interface ElementTagNameMap {
+    'my-web-bucketlist': HTMLMyWebBucketlistElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-web-bucketlist': JSXElements.MyWebBucketlistAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyWebBucketlistAttributes extends HTMLAttributes {
+      'match'?: MatchResults;
     }
   }
 }
@@ -75,7 +120,7 @@ declare global {
 
   namespace StencilComponents {
     interface MyWebContact {
-
+      'contact': ContactDetails;
     }
   }
 
@@ -98,6 +143,39 @@ declare global {
   }
   namespace JSXElements {
     export interface MyWebContactAttributes extends HTMLAttributes {
+      'contact'?: ContactDetails;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MyWebEvent {
+
+    }
+  }
+
+  interface HTMLMyWebEventElement extends StencilComponents.MyWebEvent, HTMLStencilElement {}
+
+  var HTMLMyWebEventElement: {
+    prototype: HTMLMyWebEventElement;
+    new (): HTMLMyWebEventElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-web-event': HTMLMyWebEventElement;
+  }
+  interface ElementTagNameMap {
+    'my-web-event': HTMLMyWebEventElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-web-event': JSXElements.MyWebEventAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyWebEventAttributes extends HTMLAttributes {
 
     }
   }
@@ -107,30 +185,30 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface AppHome {
+    interface MyWebHome {
 
     }
   }
 
-  interface HTMLAppHomeElement extends StencilComponents.AppHome, HTMLStencilElement {}
+  interface HTMLMyWebHomeElement extends StencilComponents.MyWebHome, HTMLStencilElement {}
 
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+  var HTMLMyWebHomeElement: {
+    prototype: HTMLMyWebHomeElement;
+    new (): HTMLMyWebHomeElement;
   };
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
+    'my-web-home': HTMLMyWebHomeElement;
   }
   interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
+    'my-web-home': HTMLMyWebHomeElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'app-home': JSXElements.AppHomeAttributes;
+      'my-web-home': JSXElements.MyWebHomeAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
+    export interface MyWebHomeAttributes extends HTMLAttributes {
 
     }
   }
@@ -174,7 +252,7 @@ declare global {
 
   namespace StencilComponents {
     interface MyWebPortfolio {
-
+      'portfolio': Portfolio[];
     }
   }
 
@@ -197,40 +275,7 @@ declare global {
   }
   namespace JSXElements {
     export interface MyWebPortfolioAttributes extends HTMLAttributes {
-
-    }
-  }
-}
-
-
-declare global {
-
-  namespace StencilComponents {
-    interface AppProfile {
-      'match': MatchResults;
-    }
-  }
-
-  interface HTMLAppProfileElement extends StencilComponents.AppProfile, HTMLStencilElement {}
-
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
-  };
-  interface HTMLElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
-  }
-  interface ElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      'app-profile': JSXElements.AppProfileAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
-      'match'?: MatchResults;
+      'portfolio'?: Portfolio[];
     }
   }
 }
@@ -306,7 +351,8 @@ declare global {
 
   namespace StencilComponents {
     interface MyWebBlog {
-
+      'blogApiKey': string;
+      'blogUrl': string;
     }
   }
 
@@ -329,7 +375,8 @@ declare global {
   }
   namespace JSXElements {
     export interface MyWebBlogAttributes extends HTMLAttributes {
-
+      'blogApiKey'?: string;
+      'blogUrl'?: string;
     }
   }
 }
@@ -340,6 +387,7 @@ declare global {
   namespace StencilComponents {
     interface MyWebBookLibrary {
       'books': Books[];
+      'card': any;
       'currentBook': Books;
     }
   }
@@ -364,6 +412,7 @@ declare global {
   namespace JSXElements {
     export interface MyWebBookLibraryAttributes extends HTMLAttributes {
       'books'?: Books[];
+      'card'?: any;
       'currentBook'?: Books;
     }
   }
@@ -374,7 +423,11 @@ declare global {
 
   namespace StencilComponents {
     interface MyWebHeader {
-
+      'backgroundColor': string;
+      'backgroundImage': string;
+      'textColor': string;
+      'type': string;
+      'videoData': any;
     }
   }
 
@@ -397,7 +450,11 @@ declare global {
   }
   namespace JSXElements {
     export interface MyWebHeaderAttributes extends HTMLAttributes {
-
+      'backgroundColor'?: string;
+      'backgroundImage'?: string;
+      'textColor'?: string;
+      'type'?: string;
+      'videoData'?: any;
     }
   }
 }
@@ -407,7 +464,8 @@ declare global {
 
   namespace StencilComponents {
     interface MyWebNav {
-
+      'backgroundColor': string;
+      'textColor': string;
     }
   }
 
@@ -430,7 +488,41 @@ declare global {
   }
   namespace JSXElements {
     export interface MyWebNavAttributes extends HTMLAttributes {
+      'backgroundColor'?: string;
+      'textColor'?: string;
+    }
+  }
+}
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface MyWebPhotoGallery {
+      'photos': Photo[];
+    }
+  }
+
+  interface HTMLMyWebPhotoGalleryElement extends StencilComponents.MyWebPhotoGallery, HTMLStencilElement {}
+
+  var HTMLMyWebPhotoGalleryElement: {
+    prototype: HTMLMyWebPhotoGalleryElement;
+    new (): HTMLMyWebPhotoGalleryElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-web-photo-gallery': HTMLMyWebPhotoGalleryElement;
+  }
+  interface ElementTagNameMap {
+    'my-web-photo-gallery': HTMLMyWebPhotoGalleryElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-web-photo-gallery': JSXElements.MyWebPhotoGalleryAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyWebPhotoGalleryAttributes extends HTMLAttributes {
+      'photos'?: Photo[];
     }
   }
 }
@@ -464,6 +556,39 @@ declare global {
   namespace JSXElements {
     export interface AppRecentEventCardAttributes extends HTMLAttributes {
       'cardEvent'?: CardEvent;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MyWebTwitter {
+
+    }
+  }
+
+  interface HTMLMyWebTwitterElement extends StencilComponents.MyWebTwitter, HTMLStencilElement {}
+
+  var HTMLMyWebTwitterElement: {
+    prototype: HTMLMyWebTwitterElement;
+    new (): HTMLMyWebTwitterElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-web-twitter': HTMLMyWebTwitterElement;
+  }
+  interface ElementTagNameMap {
+    'my-web-twitter': HTMLMyWebTwitterElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-web-twitter': JSXElements.MyWebTwitterAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyWebTwitterAttributes extends HTMLAttributes {
+
     }
   }
 }

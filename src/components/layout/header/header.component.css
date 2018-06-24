@@ -1,0 +1,30 @@
+.side-bar {
+    width: 25%;
+    position: absolute;
+    top: 50px;
+    text-align: left;
+    overflow-y: scroll;
+    height: 90%;
+    z-index: 10000;
+  }
+  .side-bar::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  #eventscreen {
+    height: 100%;
+    width: 90%;
+    margin:auto;   
+    margin-top:10px; 
+  }
+
+  #jumpvideo{
+    min-width: 100%;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width:480px){
+    .only-on-desktop{
+      display:none!important;
+    }
+    
+  }
