@@ -41,8 +41,8 @@ export class MyWebNav {
 
                 {/* <!-- Brand and toggle get grouped for better mobile display --> */}
                 <div class="navbar-brand">
-                    <stencil-route-link url='/'>
-                        <a class="navbar-item has-text-light"><i class="fas fa-2x fa-home"></i> </a>
+                    <stencil-route-link url='/' class="navbar-item has-text-light">
+                        <i class="fas fa-2x fa-home"></i>
                     </stencil-route-link>
 
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-toggle="collapse" data-target="#navMenu">

@@ -1,4 +1,4 @@
-import { Component, Prop } from "@stencil/core";
+import { Component, Prop, State } from "@stencil/core";
 import { Books } from "../../global/Books";
 import firebase from 'firebase/app';
 
@@ -9,27 +9,26 @@ import firebase from 'firebase/app';
 export class MyWebSocial {
 
     private db = firebase.database();
-    books: Books[] = [];
-    currentBook: Books;
+    @State() books: Books[];
+    @State() currentBook: Books;
     @Prop({ context: 'isServer' }) private isServer: boolean;
 
-    componentWillLoad() {
+    async componentWillLoad() {
         if (this.isServer === false) {
-            return this.getBooksLibrary();
+            console.log("this server is false", this.isServer)
+            this.getBooksLibrary();
         }
 
     }
 
-    public getBooksLibrary() {
-        return this.db.ref('/books').once('value').then((booksSnapshot: any) => {
-            this.books = (booksSnapshot.val()) || [new Books()]
-            console.log("books", this.books);
-            this.books.forEach(x => {
-                if (!x.read) {
-                    this.currentBook = x;
-                }
-            });
-            return this.books;
+    public async getBooksLibrary() {
+        const booksSnapshot = await this.db.ref('/books').once('value');
+        this.books = (booksSnapshot.val()) || [new Books()]
+        console.log("books", this.books);
+        this.books.forEach(x => {
+            if (!x.read) {
+                this.currentBook = x;
+            }
         });
     }
 

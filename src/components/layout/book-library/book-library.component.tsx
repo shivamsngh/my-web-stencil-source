@@ -1,4 +1,4 @@
-import { Component, Prop, Element, State } from '@stencil/core';
+import { Component, Prop, Element, State, Watch } from '@stencil/core';
 import { Books } from '../../../global/Books';
 
 @Component({
@@ -6,23 +6,33 @@ import { Books } from '../../../global/Books';
     styleUrl: 'book-library.component.css'
 })
 export class MyWebBookLibrary {
-    @Prop() books: Books[] = [];
+    @Prop() books: Books[];
+    @Watch('books') booksChangeHandler(newValue: Books[], oldValue: Books[]) {
+        // this.books = this.books.reverse();
+        const newArr = [];
+        const propArr = [...newValue];
+        while (propArr.length) newArr.push(propArr.splice(0, 3));
+        this.book2dArr = newArr;
+        console.log("old val in 3darr", oldValue)
+        console.log("value of 3d arr in watchis", this.book2dArr)
+    }
+
     totalBooks: number;
-    @Prop() currentBook: Books = { title: '', author: '', read: false, myrating: 0 };
+    @Prop() currentBook: Books;
     @Element() element: HTMLElement;
-    @State() book2dArr: Books[][] = [[]];
+    @State() book2dArr: Books[][];
 
     @State() modal: HTMLElement;
     @Prop() card = { image: 'assets/img/book-default.svg' };
 
-    componentDidLoad() {
-        // this.books = this.books.reverse();
+
+    componentDidUpdate() {
+       
         this.modal = this.element.querySelector('#myModal');
-        const propArr = [...this.books].reverse();
-        const newArr = [];
-        while (propArr.length) newArr.push(propArr.splice(0, 3));
-        this.book2dArr = newArr;
+        console.log("booklib comp loaded modal is", this.element.querySelector('div'))
+        console.log("booklib comp loaded modal is", this.modal)
     }
+
 
     openModal(ev: UIEvent) {
         console.log("element", this.element);
@@ -41,10 +51,9 @@ export class MyWebBookLibrary {
             currentReading: { color: 'green' },
             myRating: { color: 'green' }
         }
-
+        if (this.book2dArr && this.books)
         return (
             <div >
-
                 <div class="has-text-centered">
                     <i class="fa fa-4x fa-book ">
                     </i>
@@ -78,10 +87,8 @@ export class MyWebBookLibrary {
                     </div>
                 </div>
 
-                {/* // <!--/Book Card--> */}
-
-                {/* // <!--Modal Start--> */}
                 {/* <!-- Modal --> */}
+
                 <div class="modal fade" id="myModal" role="dialog" data-reveal>
                     <div class="modal-background"></div>
 
@@ -129,6 +136,7 @@ export class MyWebBookLibrary {
                 </div>
             </div>
         )
+        else return <div></div>
     }
 
 }
